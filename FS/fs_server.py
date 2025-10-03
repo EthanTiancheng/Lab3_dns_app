@@ -49,9 +49,11 @@ def register():
 def fibonacci():
     x = request.args.get("number")
     if x is None or not x.isdigit():
-        return Response("Bad Request: number must be integer >= 0", status=400)
+        return Response("Bad Request: number must be integer >= 0\n",
+                        status=400, mimetype="text/plain")
     val = fib(int(x))
-    return str(val), 200
+    return Response(f"{val}\n", status=200, mimetype="text/plain")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=9090)
