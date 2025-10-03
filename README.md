@@ -11,4 +11,17 @@ This repo contains a minimal 3-service application for a simplified DNS workflow
 `docker-compose` brings up all services and a private Docker network for them to communicate.
 
 ## Repo Structure
-
+dns_app/
+├─ docker-compose.yml
+├─ AS/
+│ ├─ as_server.py
+│ ├─ Dockerfile
+│ └─ requirements.txt
+├─ FS/
+│ ├─ fs_server.py
+│ ├─ Dockerfile
+│ └─ requirements.txt
+└─ US/
+├─ us_server.py
+├─ Dockerfile
+└─ requirements.txt
